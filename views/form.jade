@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    header
+        h1='New Message'
+    main
+        section.form-container
+            form(method='POST' action='/new')
+                textarea(class='input' name='description' placeholder='Pizza is not a fruit salad keep your pineapples AWAY!' cols='30')
+                input(type='text' class='input' placeholder='Username' name='username' id='username')
+                button(type='submit' id='submit-btn')='Post'

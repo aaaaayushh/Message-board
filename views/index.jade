@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  header 
+    h1= 'Message Board'
+    
+  main
+    
+  each message in messages 
+    section.message-card 
+      h2.description=message.text
+      footer
+        p.username=message.user
+        p.date=message.added
+  .button-container
+      a(class='button',href='/new') New Message
+
+
